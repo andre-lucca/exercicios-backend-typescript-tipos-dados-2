@@ -10,12 +10,5 @@
       "bairro": "Bairro do Melch",
       "cidade": "Cidade do Melch"
     }
-  },
-  {
-    "nome": "Melch 2",
-    "email": "email2@email.com",
-    "cpf": "12345678901",
-    "profissao": "Dev Desempregado 2",
-    "endereco": null
   }
 ]

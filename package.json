@@ -1,0 +1,17 @@
+{
+  "name": "exercicios-backend-typescript-tipos-dados-2",
+  "version": "1.0.0",
+  "description": "![](https://i.imgur.com/xG74tOh.png)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
+  }
+}

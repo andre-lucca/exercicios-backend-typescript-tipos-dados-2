@@ -8,7 +8,7 @@ type Endereco = {
   cidade: string
 }
 
-type User = {
+export type User = {
   nome: string
   email: string
   cpf: string
@@ -17,9 +17,9 @@ type User = {
 }
 
 const newUser: User = {
-  nome: 'Melch',
+  nome: 'Melch 2',
   email: 'email@email.com',
-  cpf: '12345678900',
+  cpf: '12345678901',
   profissao: 'Dev Desempregado',
   endereco: {
     cep: 'Cep do Melch',
@@ -29,16 +29,15 @@ const newUser: User = {
   }
 }
 
-function createUser(user: User): User {
-  fs.writeFileSync('./bd.json', JSON.stringify(user))
-
-  return user
+function createUser(user: User): void {
+  const users: User[] = JSON.parse(fs.readFileSync('./bd.json').toString())
+  fs.writeFileSync('./bd.json', JSON.stringify([...users, user]))
 }
 
 function listUsers() {
-  const bd = JSON.parse(fs.readFileSync('./bd.json').toString())
+  const users: User[] = JSON.parse(fs.readFileSync('./bd.json').toString())
 
-  console.log(bd)
+  console.log(users)
 }
 
 createUser(newUser)
